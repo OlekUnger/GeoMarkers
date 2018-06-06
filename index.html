@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html>
+<head><link href="./main.css" rel="stylesheet"></head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale = 1.0">
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+<script src="https://yandex.st/jquery/2.2.3/jquery.min.js" type="text/javascript"></script>
+<link src="main.css" rel="stylesheet">
+<title>Геоотзыв</title>
 <body>
+<div class="container">
+    <div id="map"></div>
 
-</body>
+    <div class="pop-up">
+        <header class="pop-up_header">
+            <i class="icon"></i>
+            <h3 class="address"></h3><span class="close white" id = 'close'></span>
+        </header>
+        <main class="pop-up_content">
+            <div class="comments">
+
+            </div>
+            <form action="" id="form">
+                <h2 class="form_title">Ваш отзыв</h2>
+                <div class="form_content">
+                    <input type="hidden" id="address" value = "asd"/>
+                    <input type="hidden" id="coords"/>
+                    <input type="text" id="name" placeholder="Ваше имя"/>
+                    <input type="text" id="place" placeholder="Укажите место"/>
+                    <textarea type="text" id="feelings" placeholder="Поделитесь впечатлениями"></textarea>
+                </div>
+            </form>
+
+        </main>
+        <footer class="pop-up_footer"><span></span>
+            <button id="btnSave">Добавить</button>
+        </footer>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="main.js"></script></body>
 </html>
